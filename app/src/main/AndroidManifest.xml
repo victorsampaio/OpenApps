@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="open.com.openapps" >
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -29,6 +29,10 @@
         <activity
             android:name=".openmusic.MusicPlayers"
             android:label="@string/title_activity_music_players" >
+        </activity>
+        <activity
+            android:name=".openmusicsdcard.MusicPlayerSDCard"
+            android:label="@string/title_activity_music_player_sdcard" >
         </activity>
     </application>
 

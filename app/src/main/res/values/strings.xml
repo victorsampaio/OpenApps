@@ -7,5 +7,6 @@
     <string name="title_activity_second_screen">SecondScreen</string>
     <string name="title_activity_camera">Camera</string>
     <string name="title_activity_music_players">MusicPlayers</string>
+    <string name="title_activity_music_player_sdcard">MusicPlayerSDCard</string>
 
 </resources>
