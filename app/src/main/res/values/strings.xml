@@ -8,5 +8,6 @@
     <string name="title_activity_camera">Camera</string>
     <string name="title_activity_music_players">MusicPlayers</string>
     <string name="title_activity_music_player_sdcard">MusicPlayerSDCard</string>
+    <string name="title_activity_example_media_player">ExampleMediaPlayer</string>
 
 </resources>

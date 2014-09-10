@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import open.com.openapps.mediaplayermp3.ExampleMediaPlayer;
 import open.com.openapps.opencam.Camera;
 import open.com.openapps.openmusic.MusicPlayers;
 import open.com.openapps.openmusicsdcard.MusicPlayerSDCard;
@@ -23,7 +24,7 @@ public class MenuOpenApps extends ListActivity {
         super.onCreate(icicle);
         //setContentView(R.layout.activity_menu_open_apps);
 
-        String[] topic = new String[]{"1 - Transition Screen","2 - Open Cam","3 - Player Music","4 - Player Music SDCard","5","6"};
+        String[] topic = new String[]{"1 - Transition Screen","2 - Open Cam","3 - Player Music","4 - Player Music SDCard","5 - Player Mp3","6"};
 
         this.setListAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, topic));
 
@@ -59,6 +60,8 @@ public class MenuOpenApps extends ListActivity {
 
                     break;
                 case 4:
+                    Intent itPlayerMp3 = new Intent(this, ExampleMediaPlayer.class);
+                    startActivity(itPlayerMp3);
 
                     break;
                 case 5:

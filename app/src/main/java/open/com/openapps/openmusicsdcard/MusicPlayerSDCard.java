@@ -9,6 +9,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.Toast;
+
+import java.io.File;
 
 import open.com.openapps.R;
 
@@ -32,6 +35,13 @@ public class MusicPlayerSDCard extends Activity implements OnClickListener{
         try {
             player = new MediaPlayer();
             player.setDataSource("/mnt/sdcard/comedy_drum.mp3");
+
+            // mnt/sdcard/comedy_drum.mp3
+            File sdcardDir = android.os.Environment.getExternalStorageDirectory();
+            File file = new File(sdcardDir, "comedy_drum.mp3");
+            Toast.makeText(this, file.getAbsolutePath(), Toast.LENGTH_SHORT).show();
+            player.setDataSource(file.getPath());
+            //String archive = file.getAbsolutePath();
             player.prepare();
             player.start();
         }catch (Exception e){
