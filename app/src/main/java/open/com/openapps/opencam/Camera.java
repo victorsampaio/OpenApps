@@ -13,13 +13,24 @@ import android.widget.ImageView;
 import android.provider.MediaStore;
 
 import java.io.File;
-import java.net.URI;
 
 import open.com.openapps.R;
 import open.com.openapps.utils.SDCardUtils;
-import open.com.openapps.utils.IOUtils;
+
 import open.com.openapps.utils.ImageUtils;
 
+/**
+ * @author VictorSampaio
+ * */
+/**
+  Image Button execute the method setOnClickListener() and the method execute execute the:
+ - onClick(View view) : In this method it's created the 'File' for save the archive.
+
+ The Intent (itCam) realize the capture to image of photo, but it's necessary the permission for
+ access the native camera to android. This is possible using "IMAGE_CAPTURE" in Intent.
+
+ Then the Bitmap resize the image captured and show in ImageView
+ * */
 public class Camera extends Activity {
 
     // directory to the photo
@@ -33,7 +44,7 @@ public class Camera extends Activity {
         ImageButton btnCam = (ImageButton)findViewById(R.id.btOpenCam);
         btnCam.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
 
                 //Create the directory of archive on the sdcard
                 file = SDCardUtils.getSDCardFile("cam", "foto.jgp");

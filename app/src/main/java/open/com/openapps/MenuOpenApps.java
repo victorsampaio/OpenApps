@@ -12,6 +12,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import open.com.openapps.mediaplayermp3.ExampleMediaPlayer;
+import open.com.openapps.mp3listcard.ExampleMp3ListCard;
 import open.com.openapps.opencam.Camera;
 import open.com.openapps.openmusic.MusicPlayers;
 import open.com.openapps.openmusicsdcard.MusicPlayerSDCard;
@@ -24,10 +25,10 @@ public class MenuOpenApps extends ListActivity {
         super.onCreate(icicle);
         //setContentView(R.layout.activity_menu_open_apps);
 
-        String[] topic = new String[]{"1 - Transition Screen","2 - Open Cam","3 - Player Music","4 - Player Music SDCard","5 - Player Mp3","6"};
+        String[] topic = new String[]{"1 - Transition Screen","2 - Open Cam","3 - Player Music",
+                "4 - Player Music SDCard","5 - Player Mp3","6 - Mp3 List Card" , "7 - ", "8 - "};
 
         this.setListAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, topic));
-
     }
 
     @Override
@@ -40,37 +41,52 @@ public class MenuOpenApps extends ListActivity {
                     break;
 
                 case 1:
+                    /**
+                     * Example using File, ImageButton, OnClickListener, Intent, Bitmap, Uri, ImageView
+                     * SDCardUtils and MediaStore
+                     *
+                     *
+                    */
                         Intent itCam = new Intent(this, Camera.class);
                         startActivity(itCam);
                     break;
 
                 case 2:
-                    /** Open Music Player using 'raw'
+                    /** Open Music Player using 'raw' (path Res/raw)
                     * */
                         Intent itPlayer = new Intent(this, MusicPlayers.class);
                         startActivity(itPlayer);
                     break;
 
                 case 3:
-                    /** Open Music Player using 'SD CARD'
-                     *
+                    /**
+                     * Open Music Player using 'SD CARD'
                      */
                         Intent itPlayerSDCard = new Intent(this, MusicPlayerSDCard.class);
                         startActivity(itPlayerSDCard);
 
                     break;
                 case 4:
+                    /**
+                     * Example - Player Mp3 (Play, Pause and Stop
+                     * */
                     Intent itPlayerMp3 = new Intent(this, ExampleMediaPlayer.class);
                     startActivity(itPlayerMp3);
 
                     break;
                 case 5:
+                        // Exmaple Mp3 List Card
+                        Intent itMp3ListCard = new Intent(this, ExampleMp3ListCard.class);
+                        startActivity(itMp3ListCard);
 
                     break;
 
                 case 6:
-
+                        finish();
                     break;
+                case 7:
+
+                    finish();
                 default:
                     finish();
             }

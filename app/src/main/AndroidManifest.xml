@@ -38,6 +38,10 @@
             android:name=".mediaplayermp3.ExampleMediaPlayer"
             android:label="@string/title_activity_example_media_player" >
         </activity>
+        <activity
+            android:name=".mp3listcard.ExampleMp3ListCard"
+            android:label="@string/title_activity_example_mp3_list_card" >
+        </activity>
     </application>
 
 </manifest>
