@@ -16,7 +16,7 @@ public class ServiceMp3 extends Service implements InterfaceMp3 {
     private static final String CATEGORY = "serviceMp3";
 
     private PlayerMp3 player = new PlayerMp3();
-    private final ConnetionInterfaceMp3 connection = new ConnectionInterfaceMp3();
+    private final ConnectionInterfaceMp3 connection = new ConnectionInterfaceMp3();
 
     public class ConnectionInterfaceMp3 extends Binder {
         public InterfaceMp3 getService() {
@@ -28,7 +28,9 @@ public class ServiceMp3 extends Service implements InterfaceMp3 {
     @Override
     public IBinder onBind(Intent intent) {
         Log.i(CATEGORY, "ServiceMp3onBind(). return the IBinder");
-        return connection;
+
+
+        return null;
     }
 
     @Override
