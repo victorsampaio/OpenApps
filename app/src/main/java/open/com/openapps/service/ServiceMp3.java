@@ -28,9 +28,7 @@ public class ServiceMp3 extends Service implements InterfaceMp3 {
     @Override
     public IBinder onBind(Intent intent) {
         Log.i(CATEGORY, "ServiceMp3onBind(). return the IBinder");
-
-
-        return null;
+        return connection;
     }
 
     @Override
@@ -66,8 +64,4 @@ public class ServiceMp3 extends Service implements InterfaceMp3 {
 
         player.close();
     }
-
-
-
-
 }
